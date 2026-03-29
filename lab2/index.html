@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToDo App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <h1>Zadania do wykonania</h1>
+
+  <div class="input-box">
+    <select id="listSelect"></select>
+    <input type="text" id="newListInput" placeholder="Nowa lista">
+    <button onclick="addList()">Dodaj listę</button>
+  </div>
+
+  <div class="input-box">
+    <input type="text" id="taskInput" placeholder="Nowe zadanie...">
+    <button onclick="addTask()">Dodaj</button>
+  </div>
+
+  <div class="input-box">
+    <input type="text" id="searchInput" placeholder="Szukaj...">
+    <label>
+      <input type="checkbox" id="caseToggle"> case-insensitive
+    </label>
+  </div>
+
+  <h2>Lista zadań</h2>
+  <div id="taskContainer"></div>
+
+  <h2>Kosz (1 cofnięcie)</h2>
+  <ul id="trashList"></ul>
+
+</div>
+
+<div id="modal" class="modal hidden">
+  <div class="modal-content">
+    <p id="modalText"></p>
+    <button id="confirmDelete">Usuń</button>
+    <button onclick="closeModal()">Anuluj</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
