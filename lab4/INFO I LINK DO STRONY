@@ -1,0 +1,16 @@
+Stos technologiczny (Tech Stack):
+
+> Framework: Next.js (App Router) – praca z komponentami Client i Server.
+> Baza danych: Firebase Firestore (NoSQL) – przechowywanie danych o grach w czasie rzeczywistym.
+> Autentykacja: Firebase Auth (Google Provider + Email/Password).
+> Deployment: Netlify (z wykorzystaniem Environment Variables i Suspense Boundaries).
+
+Zrealizowane funkcjonalności (zadania na 3.0 oraz 4.0.
+
+> Pełny CRUD: Możliwość dodawania, wyświetlania, edytowania i usuwania gier (z zabezpieczeniem, że edytować może tylko właściciel).
+> System Logowania: Integracja z Google oraz tradycyjny e-mail/hasło.
+> Wyszukiwarka i Filtry: Dynamiczne filtrowanie gier po tytule i kategorii.
+> Statusy i UI: Oznaczanie gier jako "Sprzedane" (zmiana stanu w bazie i wizualne wyszarzenie karty).
+> Optymalizacja: Rozwiązanie problemu prerenderingu na Netlify poprzez wprowadzenie Suspense Boundaries dla useSearchParams.
+
+Link do działającej strony: https://board-games-market.netlify.app/
