@@ -1,0 +1,11 @@
+Link do działającej aplikacji (Netlify): https://board-games-market.netlify.app/
+
+Na ocenę 3.0 (Podstawa Lab 5)
+* Architektura Flux z `useReducer`: Cały system zarządzania ulubionymi grami (lub koszykiem) został oparty na hooku `useReducer` oraz zewnętrznym reducerze (`favoritesReducer.js`). Obsługuje on akcje takie jak dodawanie, usuwanie oraz inicjalizację stanu.
+* Trwałość danych (`localStorage`): Wybrane przez użytkownika ulubione gry są automatycznie synchronizowane i zapisywane w pamięci podręcznej przeglądarki, dzięki czemu stan "serduszek" nie znika po odświeżeniu strony czy zamknięciu karty.
+
+Na wyższą ocenę (Dodatkowe optymalizacje: +1.0 pkt)
+* Wydajność z `useMemo` (+0.5 pkt): Proces filtrowania i wyszukiwania gier (`filteredGames`) został w całości zamknięty w hooku `useMemo`. 
+    * Dzięki temu operacje na tablicach (szukanie po tytule, filtrowanie po kategoriach) wykonują się wyłącznie wtedy, gdy faktycznie zmieni się lista gier pobrana z bazy, wybrana kategoria lub wpisana przez użytkownika fraza, co zapobiega niepotrzebnemu obciążaniu aplikacji przy każdym re-renderze.
+* Niekontrolowane komponenty z `useRef` (+0.5 pkt):** * W formularzu dodawania oraz edycji gry (`app/games/new/page.js`) pole **Opis gry (description)** zostało zrealizowane jako komponent niekontrolowany przy użyciu hooka `useRef`.
+    * Dzięki temu wpisywanie długiego tekstu recenzji lub opisu nie wywołuje re-renderu całego formularza przy każdym naciśnięciu klawisza na klawiaturze, co ogromnie optymalizuje działanie i płynność aplikacji.
